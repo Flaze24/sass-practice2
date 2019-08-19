@@ -1,0 +1,41 @@
+//mixins
+
+@mixin banner{
+	width:100%;
+	position:relative;
+	color:#1C1B1B;
+	.banner-content{
+		position:absolute;
+		top:50px;
+		width:100%;
+	}
+
+	img{
+		width:100%;
+	}
+}
+
+@mixin fixList($color, $direction, $width){
+	ul{
+		list-style: none;
+		display:flex;
+		flex-direction:row;
+		margin-top:0;
+		margin-bottom:0;
+		li{
+			max-width:$menuWidth;
+			width:$width;
+			margin-left:20px;
+			justify-content:center;
+			color:$color;
+			font-size:$smallSize;
+			padding:10px;
+			text-align: $direction
+		}
+		&:after{
+			content:"";
+			display:block;
+			clear:both;
+		}
+	}
+}

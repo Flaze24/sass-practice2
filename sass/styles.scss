@@ -1,0 +1,39 @@
+@import "variables";
+@import "mixins";
+
+body{
+	margin:0px;
+	padding:0px;
+	font-size:$fontSize
+}
+
+#main-nav{
+	background:$deepBlue;
+	@include fixList($white, center, 15%);
+}
+
+
+
+.extraWidth{
+		width:$width;
+		.row{
+			padding:$padding;
+			margin:$margin;
+			.black-border{
+				border:$border;
+				.text{
+					font-size:$secondSize;
+					color:$black;
+				}
+			}
+		}
+	}
+
+.banner1{
+	@include banner;
+	@include fixList(#000, right, 200px)
+}
+
+
+
+
